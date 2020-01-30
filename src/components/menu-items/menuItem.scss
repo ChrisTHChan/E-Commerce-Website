@@ -5,7 +5,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid black;
+    border: 3px solid black;
     margin: 0 7.5px 15px;
     overflow: hidden;
 
@@ -14,11 +14,29 @@
 
       .background-image {
         transform:scale(1.1);
-        transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95)
+        transition: 0.5s cubic-bezier(0.25, 0.45, 0.45, 0.95)
+      }
+
+      .background-image-cover {
+        opacity: 0.6;
+        transition: 0.5s cubic-bezier(0.25, 0.45, 0.45, 0.95)
       }
 
       .content {
-        opacity: 0.9
+        background-color: rgba(0,0,0,0);
+        transition: 0.5s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+        border: 3px solid white;
+
+        .title {
+          color: white;
+          transition: 0.5s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+        }
+  
+        .subtitle {
+          color: white;
+          transition: 0.5s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+        }
+
       }
     }
     
@@ -31,6 +49,14 @@
       height: 100%;
       background-position: center;
       background-size: cover;
+      z-index: -1;
+    }
+
+    .background-image-cover {
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      z-index: 1;
     }
 
     .content {
@@ -40,16 +66,16 @@
       flex-direction: column; 
       align-items: center;
       justify-content: center;
-      border: 1px solid black;
+      border: 3px solid black;
       background-color: white;
-      opacity: 0.7;
       position: absolute;
+      z-index: 2;
   
       .title {
         font-weight: bold;
         margin-bottom: 6px;
         font-size: 22px;
-        color: #4a4a4a;
+        color: black;
       }
   
       .subtitle {
