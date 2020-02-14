@@ -12,8 +12,6 @@ import {selectCurrentUser} from './redux/user/userSelector.js'
 
 import './App.css'
 
-//TESTING GIT CHANGES
-
 class App extends React.Component {
   
   unsubscribefromAuth = null
